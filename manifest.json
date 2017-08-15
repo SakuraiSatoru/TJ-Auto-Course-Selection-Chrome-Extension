@@ -1,0 +1,18 @@
+﻿{
+	"manifest_version": 2,
+	"name": "4m3 plugin",
+	"version": "1.0.0",
+	"background": { "scripts": ["background.js"] },
+	"page_action": {
+		"default_icon": {
+			"19": "19.png",
+			"38": "38.png"
+		},
+		"default_title": "4m3 plugin"
+	},
+	"permissions": ["tabs"],
+	"content_scripts":[{
+		"matches":["http://4m3.tongji.edu.cn/eams/*","http://localhost/*","file:///e:/python/scripts/4m3/data/20140616001045/index.html","file:///E:/python/scripts/4m3/data/20140616001045/index.html","file:///E:/python/scripts/4m3/data/20141230234926/index.html"],
+		"js":["jquery-2.0.0.min.js","content_script.js"]
+	}]
+}
